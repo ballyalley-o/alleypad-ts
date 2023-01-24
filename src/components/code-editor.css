@@ -1,3 +1,6 @@
+body {
+    justify-content: center;
+}
 .editor-wrapper {
     position: relative;
     height: 100%;
@@ -32,3 +35,4 @@
 .editor-wrapper:hover .button-clear {
     opacity: 1;
 }
+
