@@ -8,8 +8,6 @@ import parser from 'prettier/parser-babel';
 // import Highlighter from 'monaco-jsx-highlighter'
 
 
-
-
 interface CodeEditorProps {
     initialValue: string;
     onChange(value: string): void;
@@ -64,36 +62,34 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
     }
 
     return (
-      <div>
-        <h1 className="text-5xl font-bold">Alley Pad</h1>
-        <div className="editor-wrapper">
-          <button
-            className="badge badge-warning button-format"
-            onClick={onFormatClick}
-          >
-            Format
-          </button>
-          <button
-            className="badge badge-warning button-clear"
-            onClick={onClearClick}
-          >
-            Clear
-          </button>
-          <MonacoEditor
-            editorDidMount={onEditorDidMount}
-            value={initialValue}
-            height="500px"
-            language="javascript"
-            theme="vs-dark"
-            options={{
-              wordWrap: "on",
-              minimap: { enabled: false },
-              folding: false,
-              lineNumbersMinChars: 3,
-              automaticLayout: true,
-            }}
-          />
-        </div>
+      <div className="editor-wrapper">
+        <button
+          className="badge badge-warning button-format"
+          onClick={onFormatClick}
+        >
+          Format
+        </button>
+        <button
+          className="badge badge-warning button-clear"
+          onClick={onClearClick}
+        >
+          Clear
+        </button>
+        <MonacoEditor
+          editorDidMount={onEditorDidMount}
+          value={initialValue}
+          height="100%"
+          language="javascript"
+          theme="vs-dark"
+          options={{
+            wordWrap: "on",
+            minimap: { enabled: false },
+            folding: false,
+            lineNumbersMinChars: 3,
+            automaticLayout: true,
+          }}
+        />
+        {/* <h1 className="text-5xl font-bold">Alley Pad</h1> */}
       </div>
     );
 }
