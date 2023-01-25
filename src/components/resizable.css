@@ -8,7 +8,6 @@
 .resize-horizontal {
     display: flex;
     flex-direction: row;
-
 }
 
 .react-resizable-handle-s {
@@ -19,8 +18,8 @@
 }
 
 .react-resizable-handle-e {
-    width: 10px;
-    min-width: 10px;
+    width: 15px;
+    min-width: 15px;
     height: 100%;
     cursor: col-resize;
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');

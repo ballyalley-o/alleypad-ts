@@ -89,7 +89,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
             automaticLayout: true,
           }}
         />
-        {/* <h1 className="text-5xl font-bold">Alley Pad</h1> */}
+        {/* <h1 className="text-3xl font-bold">Alley Pad</h1> */}
       </div>
     );
 }
