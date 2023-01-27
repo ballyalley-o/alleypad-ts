@@ -41,7 +41,7 @@ const moveCell = (id: string, direction: DirectionTypes):
 const insertCellBefore = (id: string | null, type: CellTypes):
     InsertCellBeforeAction => {
     return {
-    type: ActionType.INSERT_CELL_AFTER,
+    type: ActionType.INSERT_CELL_BEFORE,
     payload: {
         id,
         type
@@ -56,3 +56,12 @@ const bundleCell = (id: string):
         id
     }}
 };
+
+
+export {
+    deleteCell,
+    updateCell,
+    moveCell,
+    insertCellBefore,
+    bundleCell
+}

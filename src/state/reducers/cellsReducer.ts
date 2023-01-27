@@ -54,7 +54,7 @@ const reducer = produce ((
 
             return state;
 
-        case ActionType.INSERT_CELL_AFTER:
+        case ActionType.INSERT_CELL_BEFORE:
             const cell: Cell = {
             content: '',
             type: action.payload.type,
