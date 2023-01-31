@@ -1,0 +1,15 @@
+.cell-list-item {
+    position: relative;
+    margin: 40px 10px
+}
+
+.action-bar-wrapper {
+    height: 5px;
+    width: 100%;
+    background-color: black;
+}
+
+.action-bar-wrapper:hover {
+    height: 40px;
+    transition: height .3s ease-in-out 0.1;
+}

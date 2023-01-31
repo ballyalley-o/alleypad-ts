@@ -28,7 +28,7 @@
     line-height: unset;
     font-size: unset;
     font-weight: unset;
-    color: #d4d4d4 !important;
+
 }
 
 .w-md-editor ul {
@@ -55,7 +55,9 @@
 }
 
 .text-editor .wmde-markdown hr {
-    border-top: 1px solid #dee5ed;
+    /* border-top: 1px solid #dee5ed; */
+    color: #37414b;
+
 }
 
 .text-editor .wmde-markdown ol {
@@ -73,7 +75,7 @@
 }
 
 .text-editor .w-md-editor-toolbar li button {
-    color: #d4d4d4;
+    color: inherit;
 }
 
 .text-editor .w-md-editor-content {
@@ -82,17 +84,29 @@
 
 .text-editor .w-md-editor,
 .text-editor .w-md-editor .w-md-editor-text-pre {
-    color: #d4d4d4;
+    color: inherit
 }
 
 .text-editor .w-md-editor-text-pre .bold {
-    color: unset;
+    color: inherit;
 }
 
 .text-editor .token.list.punctuation {
     background-color: unset;
 }
 
-.text-editor .wmde-markdown wmde-markdown-color {
-    background-color: whitesmoke;
+
+.text-editor {
+    background-color: #202123;
+    opacity: 100%;
+
+}
+
+code {
+    background-color: #202123;
+    opacity: 100%;
+}
+
+.text-editor-div {
+    opacity: 100% important
 }

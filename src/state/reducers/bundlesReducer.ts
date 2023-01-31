@@ -1,6 +1,2 @@
-const bundlesReducer = () => {
 
-}
-
-
-export default bundlesReducer
+export default 1
