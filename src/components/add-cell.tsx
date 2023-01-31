@@ -3,30 +3,31 @@ import { useActions } from "../hooks/use-actions";
 import { BiPlus } from "react-icons/bi";
 
 interface AddCellProps {
-    nextCellId: string | null
+    prevCellId: string | null,
+    forceVisible?: boolean
 }
 
-const AddCell: React.FC<AddCellProps> = ({ nextCellId }) => {
-    const { insertCellBefore } = useActions()
+const AddCell: React.FC<AddCellProps> = ({ forceVisible, prevCellId }) => {
+    const { insertCellAfter } = useActions()
 
     return (
-      <div className="add-cell">
+      <div className={`add-cell ${forceVisible && "force-visible"}`}>
         <div className="add-buttons">
           <button
             className="badge indicator text-code-md"
-            onClick={() => insertCellBefore(nextCellId, "code")}
+            onClick={() => insertCellAfter(prevCellId, "code")}
           >
-            <span className="hover-icon">
-              <BiPlus style={{ fontSize: "1.3rem" }} />
+            <span>
+              <BiPlus style={{ fontSize: "1.3rem", color: "white" }} />
             </span>
             <span>code</span>
           </button>
           <button
             className="badge indicator text-code-md"
-            onClick={() => insertCellBefore(nextCellId, "text")}
+            onClick={() => insertCellAfter(prevCellId, "text")}
           >
-            <span className="hover-icon">
-              <BiPlus style={{ fontSize: "1.3rem" }} />
+            <span>
+              <BiPlus style={{ fontSize: "1.3rem", color: "white" }} />
             </span>
             <span>md</span>
           </button>

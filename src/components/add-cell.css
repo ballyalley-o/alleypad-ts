@@ -12,25 +12,26 @@
     transition: opacity .3s;
 }
 
+.add-cell:active {
+    opacity: 1 !important;
+}
+
 .add-cell:hover {
     opacity: 1;
     transition: opacity .3s ease-in-out 0.1;
 }
 
-.force-visible .add-cell {
+.add-cell.force-visible {
     opacity: 1;
 }
 
 .add-cell .divider {
     position: absolute;
-    top: 50%;
-    left: 50%;
     right: 5%;
     left: 5%;
-    transform: translateY(-50%);
-    border-bottom: 1px solid gray;
+    border-bottom: 2px solid black;
     width: 90%;
-    z-index: 10;
+    z-index: -1;
 }
 
 .add-cell .add-buttons {
@@ -62,17 +63,20 @@
 
 .hover-icon {
     position: relative;
-    top: 50%;
-    left: 40%;
+    top: 100%;
+    left: 80%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity .3s ease-in-out 0.1;
+    transition: opacity .3s ease-in-out 0.1s;
 }
 
 .hover-icon:hover {
     position: relative;
-    top: 50%;
-    left: 10%;
+    top: 100%;
+    left: 15%;
     opacity: 1;
 }
+
+
+
 

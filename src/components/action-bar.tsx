@@ -14,18 +14,18 @@ const Actionbar: React.FC<ActionbarProps> = ({ id }) => {
     return (
       <div className="action-bar absolute">
         <button
-          className="btn btn-success"
+          className="badge badge-success"
           onClick={() => moveCell(id, "up")}
         >
           <HiChevronUp />
         </button>
         <button
-          className="btn btn-info"
+          className="badge badge-info"
           onClick={() => moveCell(id, "down")}
         >
           <HiChevronDown />
         </button>
-        <button className="btn btn-error" onClick={() => deleteCell(id)}>
+        <button className="badge badge-error" onClick={() => deleteCell(id)}>
           <BiNoEntry />
         </button>
       </div>

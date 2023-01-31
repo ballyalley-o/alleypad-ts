@@ -1,16 +1,18 @@
+import { Dispatch } from 'redux';
 import { ActionType } from '../action-types';
 import { CellTypes } from '../cell';
+import bundle from '../../bundler'
 import {
   MoveCellAction,
   DeleteCellAction,
-  InsertCellBeforeAction,
+  InsertCellAfterAction,
   UpdateCellAction,
-  BundleStartAction,
   DirectionTypes,
+  Action
     } from "../actions";
 
 
-const deleteCell = (id: string):
+export const deleteCell = (id: string):
     DeleteCellAction => {
         return {
             type: ActionType.DELETE_CELL,
@@ -18,7 +20,7 @@ const deleteCell = (id: string):
         }
     };
 
-const updateCell = (id: string, content: string):
+export const updateCell = (id: string, content: string):
     UpdateCellAction => {
     return {
     type: ActionType.UPDATE_CELL,
@@ -28,7 +30,7 @@ const updateCell = (id: string, content: string):
     }}
 };
 
-const moveCell = (id: string, direction: DirectionTypes):
+export const moveCell = (id: string, direction: DirectionTypes):
     MoveCellAction => {
     return {
     type: ActionType.MOVE_CELL,
@@ -38,30 +40,42 @@ const moveCell = (id: string, direction: DirectionTypes):
     }}
 };
 
-const insertCellBefore = (id: string | null, type: CellTypes):
-    InsertCellBeforeAction => {
+export const insertCellAfter = (id: string | null, type: CellTypes):
+    InsertCellAfterAction => {
     return {
-    type: ActionType.INSERT_CELL_BEFORE,
+    type: ActionType.INSERT_CELL_AFTER,
     payload: {
         id,
         type
     }}
 };
 
-const bundleCell = (id: string):
-    BundleStartAction => {
-    return {
-    type: ActionType.BUNDLE_START,
-    payload: {
-        id
-    }}
-};
+export const createBundle = (cellId: string, input: string) => {
+    return async (dispatch: Dispatch<Action>) => {
+        dispatch({
+            type: ActionType.BUNDLE_START,
+            payload: {
+                cellId
+            }
+        })
 
+        const result = await bundle(input)
 
-export {
-    deleteCell,
-    updateCell,
-    moveCell,
-    insertCellBefore,
-    bundleCell
+        dispatch({
+            type: ActionType.BUNDLE_COMPLETE,
+            payload: {
+                cellId,
+                bundle: result
+            }
+        })
+    }
 }
+
+
+// export {
+//     deleteCell,
+//     updateCell,
+//     moveCell,
+//     insertCellAfter,
+//     // bundleCell
+// }
