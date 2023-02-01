@@ -1,4 +1,5 @@
 import './code-editor.css'
+import './syntax.css'
 import { useRef } from "react";
 import MonacoEditor, { EditorDidMount } from "@monaco-editor/react";
 import prettier from 'prettier';
@@ -15,6 +16,7 @@ interface CodeEditorProps {
 
 const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
   const editorRef = useRef<any>();
+
   const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
       editorRef.current = monacoEditor;
       monacoEditor.onDidChangeModelContent(() => {
@@ -56,13 +58,12 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
         editorRef.current.setValue(formatted)
     }
 
-
     const onClearClick = () => {
       editorRef.current.setValue(initialValue)
     }
 
     return (
-      <div className="editor-wrapper">
+      <div className="editor-wrapper border-2 p-2">
         <button
           className="badge badge-warning button-format"
           onClick={onFormatClick}

@@ -4,11 +4,13 @@ import { Action } from '../actions';
 
 
 interface BundlesState {
-    [key: string] : {
+    [key: string] : |
+    {
         loading: boolean;
         code: string;
         err: string
-    } | undefined;
+    }
+    | undefined;
 }
 
 const initialState: BundlesState = {};

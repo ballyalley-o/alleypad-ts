@@ -110,3 +110,8 @@ code {
 .text-editor-div {
     opacity: 100% important
 }
+
+.text-editor .w-md-editor-text-pre {
+    background-color: #202123;
+    opacity: 100%;
+}

@@ -21,6 +21,9 @@ const bundle = async (rawCode: string) => {
         "process.env.NODE_ENV": '"production"',
         global: "window",
       },
+      //avoid naming collisions in the code browser
+      jsxFactory: '_React.createElement',
+      jsxFragment: '_React.Fragment'
       });
 
       return {

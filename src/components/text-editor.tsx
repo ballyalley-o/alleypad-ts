@@ -39,7 +39,7 @@ const TextEditor: React.FC<TextEditorProps> = ({ cell }) => {
 
     if (editing) {
         return (
-            <div ref={ref} className="text-editor">
+            <div ref={ref} className="text-editor border-2">
 
                 <MDEditor
                     value={cell.content}
@@ -51,7 +51,8 @@ const TextEditor: React.FC<TextEditorProps> = ({ cell }) => {
     }
     return (
       <div className="text-editor" onClick={() => setEditing(true)}>
-        <div className="text-editor-div border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div className="text-editor-div border-r border-b border-l border-gray-400 lg:border-l-1 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
+        >
           <MDEditor.Markdown source={cell.content || '<h1>Click to Edit</h1>'} />
         </div>
       </div>

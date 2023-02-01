@@ -56,10 +56,10 @@ const Preview: React.FC<PreviewProps>  = ({ code, err }) => {
         <iframe
           title="code preview"
           ref={iframe}
-          srcDoc={html}
           sandbox="allow-scripts"
+          srcDoc={html}
         />
-        {err && <div className='preview-error'>{err}</div>}
+        {err && <div className="preview-error">{err}</div>}
       </div>
     );
 

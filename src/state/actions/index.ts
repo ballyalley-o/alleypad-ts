@@ -57,4 +57,5 @@ export type Action =
     BundleStartAction |
     BundleCompleteAction;
 
+
 export type DirectionTypes = 'up' | 'down';

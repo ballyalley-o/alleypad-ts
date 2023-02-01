@@ -40,13 +40,13 @@ export const moveCell = (id: string, direction: DirectionTypes):
     }}
 };
 
-export const insertCellAfter = (id: string | null, type: CellTypes):
+export const insertCellAfter = (id: string | null, cellType: CellTypes):
     InsertCellAfterAction => {
     return {
     type: ActionType.INSERT_CELL_AFTER,
     payload: {
         id,
-        type
+        type: cellType
     }}
 };
 
