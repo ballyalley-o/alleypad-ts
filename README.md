@@ -2,6 +2,11 @@
 
 >UNDER DEVELOPMENT
 
+## TODO:
+    -Persist to LocalStorage
+    -User API
+
+
 ### Available Scripts
 
 In the project directory, you can run:
