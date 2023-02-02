@@ -25,7 +25,10 @@ const Actionbar: React.FC<ActionbarProps> = ({ id }) => {
         >
           <HiChevronDown />
         </button>
-        <button className="badge badge-error" onClick={() => deleteCell(id)}>
+        <button className="badge badge-error" onClick={() => {
+          if (window.confirm("Are you sure you want to delete this cell?")) {
+          deleteCell(id)} else {return}
+          }}>
           <BiNoEntry />
         </button>
       </div>

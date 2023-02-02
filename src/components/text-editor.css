@@ -1,6 +1,6 @@
 .w-md-editor .title {
     line-height: unset;
-    font-size: unset;
+    font-size: 4rem;
     font-weight: unset;
 }
 
@@ -79,7 +79,8 @@
 }
 
 .text-editor .w-md-editor-content {
-    background-color: #202123;
+    background-color: inherit;
+    color: inherit
 }
 
 .text-editor .w-md-editor,
@@ -88,7 +89,7 @@
 }
 
 .text-editor .w-md-editor-text-pre .bold {
-    color: inherit;
+    color: white
 }
 
 .text-editor .token.list.punctuation {
@@ -97,13 +98,11 @@
 
 
 .text-editor {
-    background-color: #202123;
-    opacity: 100%;
+
 
 }
 
 code {
-    background-color: #202123;
     opacity: 100%;
 }
 
@@ -112,6 +111,7 @@ code {
 }
 
 .text-editor .w-md-editor-text-pre {
-    background-color: #202123;
     opacity: 100%;
+    color: white
 }
+
