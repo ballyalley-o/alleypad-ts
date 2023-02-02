@@ -13,9 +13,8 @@ interface CodeEditorProps {
 }
 
 const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
-  const [show, setShow] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const editorRef = useRef<any>();
-
 
 
   const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
@@ -50,7 +49,6 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
   const onClearClick = () => {
     //set true to show modal
 
-
     if (editorRef.current.getValue()) {
       if (window.confirm("Are you sure you want to clear the editor?")) {
         editorRef.current.setValue("");
@@ -62,22 +60,28 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
     <div className="editor-wrapper border-2">
       <button
         className="badge badge-warning button-format"
+        type="button"
         onClick={onFormatClick}
       >
         format
       </button>
       <button
         className="badge badge-warning button-clear"
+        type="button"
         onClick={onClearClick}
       >
         clear
       </button>
-      <ConfirmModal
-      show={show}
-      title="Clear Editor"
-      body="Are you sure you want to clear the editor?"
-      onConfirm={() => {editorRef.current.setValue('');}}
-      handleClose={() => {}} />
+
+      {/* <ConfirmModal
+        show={showModal}
+        title="Clear Editor"
+        body="Are you sure you want to clear the editor?"
+        onConfirm={() => {
+          editorRef.current.setValue("");
+        }}
+        handleClose={() => {}}
+      /> */}
 
       <MonacoEditor
         editorDidMount={onEditorDidMount}

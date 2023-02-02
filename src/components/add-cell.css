@@ -29,9 +29,9 @@
     position: absolute;
     right: 5%;
     left: 5%;
-    border-bottom: 2px solid black;
     width: 90%;
-    z-index: -1;
+    z-index: 10;
+
 }
 
 .add-cell .add-buttons {
@@ -75,6 +75,7 @@
     top: 100%;
     left: 15%;
     opacity: 1;
+
 }
 
 

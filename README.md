@@ -1,4 +1,4 @@
-# ALLEYPAD
+# **ALLEYPAD**
 
 >UNDER DEVELOPMENT
 
@@ -6,6 +6,7 @@
 
 
 - [ ] UI/UX Updates
+- [ ] Lerna CLI Express
 - [ ] Persist to LocalStorage
 - [ ] User API
 - [ ] NODE JS Server
@@ -21,6 +22,8 @@
 **In the project directory, you can run:**
 ```
  npm start
+
+ npm serve
 ```
 <font size= "2">Runs the app in the development mode.\
 Open <span style="color: yellow">[LOCALHOST 3000 ](http://localhost:3000)</span> to view it in the browser.

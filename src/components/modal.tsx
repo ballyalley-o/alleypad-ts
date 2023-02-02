@@ -9,7 +9,6 @@ interface ConfirmModalProps {
   onConfirm: () => void;
 }
 
-
 const ConfirmModal: React.FC<ConfirmModalProps> = ({
   show,
   handleClose,
@@ -17,21 +16,27 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
   body,
   onConfirm,
 }) => {
+
+
+
+
   return (
-    <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
-        <Modal.Title>{title}</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>{body}</Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-          Cancel
-        </Button>
-        <Button variant="danger" onClick={onConfirm}>
-          Clear
-        </Button>
-      </Modal.Footer>
-    </Modal>
+    <>
+      <Modal id="popup-modal" show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{body}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={onConfirm}>
+            Confirm
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 };
 

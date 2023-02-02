@@ -14,6 +14,7 @@ const Actionbar: React.FC<ActionbarProps> = ({ id }) => {
     return (
       <div className="action-bar absolute">
         <button
+          data-modal-target="#modal"
           className="badge badge-success"
           onClick={() => moveCell(id, "up")}
         >
@@ -38,3 +39,4 @@ const Actionbar: React.FC<ActionbarProps> = ({ id }) => {
 
 
 export default Actionbar
+

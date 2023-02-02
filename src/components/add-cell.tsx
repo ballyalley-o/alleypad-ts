@@ -16,7 +16,7 @@ const AddCell: React.FC<AddCellProps> = ({ forceVisible, prevCellId }) => {
           <button
             className="badge indicator text-code-md"
             onClick={() => insertCellAfter(prevCellId, "code")}
-          >
+            >
             <span>
               <BiPlus style={{ fontSize: "1.3rem", color: "white" }} />
             </span>

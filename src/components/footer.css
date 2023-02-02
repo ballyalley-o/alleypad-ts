@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,300;1,700&display=swap');
+
+.link {
+    color: inherit;
+    text-decoration: none;
+    font-size: .8rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+p {
+    font-size: .6rem;
+    font-weight: 300;
+    color: inherit;
+    margin: 0;
+}
