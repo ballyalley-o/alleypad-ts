@@ -68,5 +68,17 @@
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4"
-  }
+  },
+  "description": ">UNDER DEVELOPMENT",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ballyalley-o/alleypad-ts.git"
+  },
+  "author": "Bally Lomibao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ballyalley-o/alleypad-ts/issues"
+  },
+  "homepage": "https://github.com/ballyalley-o/alleypad-ts#readme"
 }
